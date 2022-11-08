@@ -34,16 +34,15 @@
 };
 console.log(filter(arr, (currentValue) => currentValue>2));*/
 
-function indexOf(searchElement, fromIndex) {
+function IndexOf(searchElement,fromIndex ) {
   fromIndex=0;
-  let x = '';
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === searchElement) {  
-    x.push(arr(i)); 
+    return i; 
     }
   }
   return -1; 
 };
 
 const arr = [1, 2, 3, 4];
-console.log(arr.indexOf(4,0))
+console.log(IndexOf(2))
