@@ -34,7 +34,7 @@
 };
 console.log(filter(arr, (currentValue) => currentValue>2));*/
 
-function IndexOf(searchElement,fromIndex ) {
+/*function IndexOf(searchElement,fromIndex ) {
   fromIndex=0;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === searchElement) {  
@@ -45,4 +45,18 @@ function IndexOf(searchElement,fromIndex ) {
 };
 
 const arr = [1, 2, 3, 4];
-console.log(IndexOf(2))
+console.log(IndexOf(2))*/
+
+
+function Includes(searchElement,fromIndex ) {
+  fromIndex=0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === searchElement) {  
+    return true; 
+    }
+  }
+  return false; 
+};
+
+const arr = [1, 2, 3, 4];
+console.log(Includes(2))
