@@ -1,3 +1,61 @@
+Вопрос 1.
+Можем ли мы изменить this дополнительным связыванием?
+
+Что выведет этот код?
+
+function f() {
+  alert(this.name);
+}
+
+f = f.bind( {name: "Вася"} ).bind( {name: "Петя" } );
+
+f();//Здесь будет undefined, так как была вызвана фунция f у которой нет своего this, а не переменнная f которая равна f.bind( {name: "Вася"} ).bind( {name: "Петя" } )
+
+Вопрос 2.
+
+В свойство функции записано значение. Изменится ли оно после применения bind? Обоснуйте ответ.
+
+function sayHi() {
+  alert( this.name );
+}
+sayHi.test = 5;
+
+let bound = sayHi.bind({
+  name: "Вася"
+});
+
+alert( bound.test ); // что выведет? почему?
+//Выведет Вася и undefined. В функцию sayHi() был передан this Вася и вызов bound равен Вася. test был вызван не правильно
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*function forEach(arr, callback) {
     for(let i = 0; i < arr.length; i++) {
       callback(arr[i], i, arr)
@@ -69,7 +127,7 @@ const arr = [1, 2, 3, 4];
 const arr2=[5,6,7,8];
 
 console.log(Concat(arr,arr2))*/
-
+/*
 Вопрос 1.
 
 const call = {
